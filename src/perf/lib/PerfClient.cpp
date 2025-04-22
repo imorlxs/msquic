@@ -381,7 +381,7 @@ PerfClient::Wait(
             unsigned long long RPS = CompletedStreams * 1000 * 1000 / RunTime;
             WriteOutput("Result: %llu RPS\n", RPS);
         }
-    } else if (!PrintThroughput && !PrintLatency) {
+    } else if (!PrintConnThroughput && !PrintLatency) {
         if (CompletedConnections && CompletedStreams) {
             WriteOutput(
                 "Completed %llu connections and %llu streams!\n",
